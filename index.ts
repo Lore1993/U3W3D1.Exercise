@@ -39,65 +39,65 @@ let flexibleValue: number | null | undefined;
 type WeekDay = "Lunedì" | "Martedì" | "Mercoledì" | "Giovedì" | "Venerdì" | "Sabato" | "Domenica";
 
 // 10) Tipizza il seguente array di numeri nei due modi possibili:
-// const numbers: number[] = [1, 2, 3];
-// const numbers2: Array<number> = [1, 2, 3];
+ const numbers: number[] = [1, 2, 3];
+const numbers2: Array<number> = [1, 2, 3];
 
 // 11) Crea una tupla per definire un array di 5 elementi, i primi 3 devono essere stringhe e gli ultimi due numeri.
-// let myTuple: [string, string, string, number, number];
+let myTuple: [string, string, string, number, number];
 
 // 12) Qual è la differenza tra type e interface?
 // "type" è più flessibile e può unire più tipi. "interface" è pensata per definire oggetti e può essere estesa più volte.
 // In generale le interfacce sono più usate per definire modelli di oggetti.
 
 // 13) Definisci un'interfaccia in TypeScript per un oggetto dotato di proprietà "firstname", "lastname", e "age".
-// interface Person {
-//   firstname: string;
-//   lastname: string;
-//   age: number;
-// }
+ interface Person {
+   firstname: string;
+   lastname: string;
+   age: number;
+ }
 
 // 14) Crea un'interfaccia per un utente con email obbligatoria e telefono opzionale.
-// interface User {
-//   email: string;
-//   phone?: string;
-// }
+ interface User {
+  email: string;
+  phone?: number;
+}
 
 // 15) Crea un array tipizzato di oggetti "Studente" con nome e voto.
-// interface Studente {
-//   nome: string;
-//   voto: number;
-// }
-// let studenti: Studente[] = [
-//   { nome: "Luca", voto: 28 },
-//   { nome: "Sara", voto: 30 }
-// ];
+ interface Studente {
+  nome: string;
+   voto: number;
+ }
+ let studenti: Studente[] = [
+  { nome: "Luca", voto: 28 },
+   { nome: "Sara", voto: 30 }
+ ];
 
 // 16) Crea un'interfaccia base "Veicolo" e estendila per creare "Auto".
-// interface Veicolo {
-//   marca: string;
-//   modello: string;
-// }
-// interface Auto extends Veicolo {
-//   porte: number;
-// }
+ interface Veicolo {
+   marca: string;
+   modello: string;
+ }
+ interface Auto extends Veicolo {
+   porte: number;
+ }
 
 // 17) Crea un oggetto che implementi l'interfaccia Auto.
-// const myCar: Auto = {
-//   marca: "Fiat",
-//   modello: "Panda",
-//   porte: 5
-// };
+ const myCar: Auto = {
+   marca: "Fiat",
+   modello: "Panda",
+   porte: 5
+ };
 
 // 18) Cosa sono i Generics in TypeScript?
-// Sono un modo per creare tipi riutilizzabili che possono cambiare a seconda del dato passato.  
-// Tipo una funzione o interfaccia “flessibile”.
+ //Sono un modo per creare tipi riutilizzabili che possono cambiare a seconda del dato passato.  
+ //Tipo una funzione o interfaccia “flessibile”.
 
 // 19) È possibile avere più tipi generici in un’interfaccia?
 // Sì, basta separarli con una virgola: interface Test<A, B> { ... }
 
 // 20) Crea un interfaccia generica per una richiesta API
-// interface ApiResponse<T> {
-//   data: T;
-//   success: boolean;
-//   message?: string;
-// }
+ interface ApiResponse<T> {
+   data: T;
+   success: boolean;
+   message?: string;
+ }
